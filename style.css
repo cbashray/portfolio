@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #38bdf8;
+  margin-top: 10px;
+}
+
+.tagline {
+  max-width: 600px;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #cbd5f5;
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 10%;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* SKILLS */
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.skill-grid span {
+  background: #1e293b;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+
+.skill-grid span:hover {
+  transform: translateY(-5px);
+}
+
+/* PROJECTS */
+.projects {
+  background: #020617;
+}
+
+.project-card {
+  max-width: 700px;
+  margin: auto;
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.project-card h4 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #cbd5f5;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 20px;
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  text-align: center;
+  font-size: 0.85rem;
+  background: #020617;
+  color: #94a3b8;
+}
