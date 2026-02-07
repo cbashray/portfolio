@@ -4,43 +4,75 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CB Ashray | Student Developer</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- BACKGROUND EFFECT -->
+  <div class="bg-gradient"></div>
+
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero fade-in">
     <h1>CB Ashray</h1>
     <h2>Student Developer</h2>
     <p class="tagline">
-      Building clean, functional, and creative digital solutions.
+      Designing and building clean, modern digital experiences.
     </p>
+
+    <div class="hero-icons">
+      <i class="fa-brands fa-python"></i>
+      <i class="fa-brands fa-java"></i>
+      <i class="fa-solid fa-database"></i>
+      <i class="fa-solid fa-code"></i>
+    </div>
   </section>
 
   <!-- SKILLS -->
-  <section class="skills">
+  <section class="skills slide-up">
     <h3>Skills & Tech Stack</h3>
+
     <div class="skill-grid">
-      <span>Python</span>
-      <span>Java</span>
-      <span>C</span>
-      <span>DBMS</span>
+      <div class="skill-card">
+        <i class="fa-brands fa-python"></i>
+        <span>Python</span>
+      </div>
+
+      <div class="skill-card">
+        <i class="fa-brands fa-java"></i>
+        <span>Java</span>
+      </div>
+
+      <div class="skill-card">
+        <i class="fa-solid fa-c"></i>
+        <span>C</span>
+      </div>
+
+      <div class="skill-card">
+        <i class="fa-solid fa-database"></i>
+        <span>DBMS</span>
+      </div>
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section class="projects">
+  <section class="projects slide-up">
     <h3>Projects</h3>
 
     <div class="project-card">
       <h4>AI Design Project</h4>
       <p>
-        A creative AI-focused design project built using Canva, showcasing
-        visual storytelling and modern layout concepts.
+        A creative AI-focused project showcasing modern UI design and
+        visual storytelling using Canva.
       </p>
       <a href="https://ashray.my.canva.site/new-ai-ed" target="_blank">
-        View Project →
+        View Project <i class="fa-solid fa-arrow-right"></i>
       </a>
     </div>
   </section>
