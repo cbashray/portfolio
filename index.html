@@ -1,86 +1,475 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CB Ashray | Student Developer</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
 
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
 
-  <link rel="stylesheet" href="style.css" />
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <!-- BACKGROUND EFFECT -->
-  <div class="bg-gradient"></div>
+  <!--
+    - #MAIN
+  -->
 
-  <!-- HERO -->
-  <section class="hero fade-in">
-    <h1>CB Ashray</h1>
-    <h2>Student Developer</h2>
-    <p class="tagline">
-      Designing and building clean, modern digital experiences.
-    </p>
+  <main>
 
-    <div class="hero-icons">
-      <i class="fa-brands fa-python"></i>
-      <i class="fa-brands fa-java"></i>
-      <i class="fa-solid fa-database"></i>
-      <i class="fa-solid fa-code"></i>
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="CB Ashray" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="CB Ashray">CB Ashray</h1>
+
+          <p class="title">Aspiring Software Developer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:cbashray@gmail.com" class="contact-link">cbashray@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+918106201450" class="contact-link">+91 8106201450</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="2006-12-22">22 December, 2006</time>
+
+
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Hyderabad, India</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+  <a
+    href="https://www.facebook.com/cbashray"
+    class="social-link"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <ion-icon name="logo-facebook"></ion-icon>
+  </a>
+</li>
+
+
+          <li class="social-item">
+  <a
+    href="https://x.com/cbashray"
+    class="social-link"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="X (Twitter) profile"
+  >
+    <ion-icon name="logo-twitter"></ion-icon>
+  </a>
+</li>
+
+<li class="social-item">
+  <a
+    href="https://www.instagram.com/cbashray"
+    class="social-link"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram profile"
+  >
+    <ion-icon name="logo-instagram"></ion-icon>
+  </a>
+</li>
+
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+  <ul class="navbar-list">
+
+    <li class="navbar-item">
+      <button class="navbar-link active" data-nav-link data-target="about">About</button>
+    </li>
+
+    <li class="navbar-item">
+      <button class="navbar-link" data-nav-link data-target="resume">Resume</button>
+    </li>
+
+    <li class="navbar-item">
+      <button class="navbar-link" data-nav-link data-target="portfolio">Portfolio</button>
+    </li>
+
+    <li class="navbar-item">
+      <button class="navbar-link" data-nav-link data-target="contact">Contact</button>
+    </li>
+
+  </ul>
+</nav>
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I am a second-year Engineering student at Methodist College of Engineering and Technology, with a strong interest in web design, web development, and digital editing. I focus on building modern, user-centric web experiences that balance clean design with solid technical execution.
+          </p>
+
+          <p>
+            My interests span frontend development, UI/UX design, and creative editing, and I actively work on improving my skills through hands-on projects and continuous learning. I enjoy translating ideas into functional, visually engaging interfaces and experimenting with new tools and frameworks to stay current with industry trends.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg" alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web design</h4>
+
+                <p class="service-item-text">
+  Designing clean, responsive website layouts with a focus on usability and modern UI principles.
+</p>
+
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+
+                <p class="service-item-text">
+  Building responsive websites using HTML, CSS, JavaScript, and frontend best practices.
+</p>
+
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile apps</h4>
+
+                <p class="service-item-text">
+                  Professional development of applications for iOS and Android.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Photography</h4>
+
+                <p class="service-item-text">
+                  I make high-quality photos of any category at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Practice Projects</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+  <h4 class="h4 timeline-item-title">
+    Methodist College of Engineering and Technology
+  </h4>
+  <span>2023 — Present</span>
+  <p class="timeline-text">
+    Bachelor of Engineering. Currently in second year, focusing on web
+    development, frontend technologies, and practical project-based learning.
+  </p>
+</li>
+
+
+           
+
+          </ol>
+
+        </section>
+
+       
+        
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://cbashray.github.io/Floppy/" target="_blank" rel="noopener noreferrer">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-1.jpg" alt="Floppy Bird" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Floppy Bird</h3>
+
+              </a>
+            </li>
+
+            <!--
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Orizon</h3>
+
+              </a>
+            </li>
+          
+            -->
+
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" enabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
     </div>
-  </section>
 
-  <!-- SKILLS -->
-  <section class="skills slide-up">
-    <h3>Skills & Tech Stack</h3>
+  </main>
 
-    <div class="skill-grid">
-      <div class="skill-card">
-        <i class="fa-brands fa-python"></i>
-        <span>Python</span>
-      </div>
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
 
-      <div class="skill-card">
-        <i class="fa-brands fa-java"></i>
-        <span>Java</span>
-      </div>
-
-      <div class="skill-card">
-        <i class="fa-solid fa-c"></i>
-        <span>C</span>
-      </div>
-
-      <div class="skill-card">
-        <i class="fa-solid fa-database"></i>
-        <span>DBMS</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="projects slide-up">
-    <h3>Projects</h3>
-
-    <div class="project-card">
-      <h4>AI Design Project</h4>
-      <p>
-        A creative AI-focused project showcasing modern UI design and
-        visual storytelling using Canva.
-      </p>
-      <a href="https://ashray.my.canva.site/new-ai-ed" target="_blank">
-        View Project <i class="fa-solid fa-arrow-right"></i>
-      </a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 CB Ashray. All rights reserved.</p>
-  </footer>
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
+
 </html>
