@@ -137,11 +137,34 @@ if (filterBtn.length && selectValue) {
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
+const formStatus = document.querySelector("[data-form-status]");
+
+const setFormStatus = function (message, isError = false) {
+  if (!formStatus) return;
+
+  formStatus.textContent = message;
+  formStatus.classList.add("is-visible");
+  formStatus.classList.toggle("is-error", isError);
+}
+
+const clearFormStatus = function () {
+  if (!formStatus) return;
+
+  formStatus.textContent = "";
+  formStatus.classList.remove("is-visible", "is-error");
+}
 
 // add event to all form input field
 if (form && formBtn && formInputs.length) {
+  let isIframeSubmitting = false;
+  const hiddenIframeName = form.getAttribute("target");
+  const hiddenIframe = hiddenIframeName
+    ? document.querySelector(`iframe[name="${hiddenIframeName}"]`)
+    : null;
+
   for (let i = 0; i < formInputs.length; i++) {
     formInputs[i].addEventListener("input", function () {
+      clearFormStatus();
 
       // check form validation
       if (form.checkValidity()) {
@@ -152,6 +175,66 @@ if (form && formBtn && formInputs.length) {
 
     });
   }
+
+  if (hiddenIframe) {
+    hiddenIframe.addEventListener("load", function () {
+      if (!isIframeSubmitting) return;
+
+      isIframeSubmitting = false;
+      form.reset();
+      formBtn.setAttribute("disabled", "");
+      setFormStatus("Message sent successfully!");
+    });
+  }
+
+  form.addEventListener("submit", async function (event) {
+    const googleFormUrl = form.dataset.googleFormUrl;
+    const fullNameEntry = form.dataset.entryFullname;
+    const emailEntry = form.dataset.entryEmail;
+    const messageEntry = form.dataset.entryMessage;
+
+    const fullNameInput = form.querySelector('input[name="fullname"]');
+    const emailInput = form.querySelector('input[name="email"]');
+    const messageInput = form.querySelector('textarea[name="message"]');
+
+    if (!googleFormUrl || !fullNameEntry || !emailEntry || !messageEntry) {
+      if (hiddenIframe) {
+        isIframeSubmitting = true;
+        formBtn.setAttribute("disabled", "");
+        setFormStatus("Sending message...");
+      }
+      return;
+    }
+
+    if (!fullNameInput || !emailInput || !messageInput) return;
+
+    event.preventDefault();
+
+    const formData = new URLSearchParams();
+    formData.append(fullNameEntry, fullNameInput.value);
+    formData.append(emailEntry, emailInput.value);
+    formData.append(messageEntry, messageInput.value);
+
+    formBtn.setAttribute("disabled", "");
+
+    try {
+      await fetch(googleFormUrl, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+        },
+        body: formData.toString()
+      });
+
+      form.reset();
+      formBtn.setAttribute("disabled", "");
+      setFormStatus("Message sent successfully!");
+    } catch (error) {
+      formBtn.removeAttribute("disabled");
+      setFormStatus("Unable to send message right now. Please try again.", true);
+    }
+  });
 }
 
 
