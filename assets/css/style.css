@@ -1221,6 +1221,17 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .form-btn:disabled:hover::before { background: var(--bg-gradient-jet); }
 
+.form-status {
+  display: none;
+  margin-top: 14px;
+  font-size: var(--fs-7);
+  color: var(--vegas-gold);
+}
+
+.form-status.is-visible { display: block; }
+
+.form-status.is-error { color: var(--bittersweet-shimmer); }
+
 
 
 
