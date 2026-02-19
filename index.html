@@ -15,7 +15,7 @@
   <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/style.css?v=20260220">
 
   <!--
     - google font link
@@ -424,22 +424,20 @@
           <h3 class="h3 form-title">Contact Form</h3>
 
           <form
-            action="#"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSfxnxPwlP-Y5LpDCossshAq8q0XrNDmFZIoUT7qgmtDhWtuxA/formResponse"
+            method="POST"
+            target="hidden_iframe"
             class="form"
             data-form
-            data-google-form-url="https://docs.google.com/forms/d/e/1FAIpQLSfxnxPwlP-Y5LpDCossshAq8q0XrNDmFZIoUT7qgmtDhWtuxA/formResponse"
-            data-entry-fullname="entry.2005620554"
-            data-entry-email="entry.1045781291"
-            data-entry-message="entry.839337160"
           >
 
             <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="text" name="entry.2005620554" class="form-input" placeholder="Full name" required data-form-input>
 
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+              <input type="email" name="entry.1045781291" class="form-input" placeholder="Email address" required data-form-input>
             </div>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <textarea name="entry.839337160" class="form-input" placeholder="Your Message" required data-form-input></textarea>
 
             <button class="form-btn" type="submit" enabled data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
@@ -447,6 +445,8 @@
             </button>
 
           </form>
+
+          <iframe name="hidden_iframe" title="Hidden form target" style="display:none;"></iframe>
 
         </section>
 
@@ -459,7 +459,7 @@
   <!--
     - custom js link
   -->
-  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/script.js?v=20260220"></script>
 
   <!--
     - ionicon link
