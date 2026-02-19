@@ -251,7 +251,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   navLinks.forEach(link => {
     link.addEventListener("click", () => {
-      const target = link.dataset.target;
+      const target = (link.dataset.target || "").toLowerCase();
 
       // Navbar active state
       navLinks.forEach(btn => btn.classList.remove("active"));
@@ -260,7 +260,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Page switching
       pages.forEach(page => {
         page.classList.remove("active");
-        if (page.dataset.page === target) {
+        if ((page.dataset.page || "").toLowerCase() === target) {
           page.classList.add("active");
         }
       });
